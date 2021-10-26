@@ -9,7 +9,7 @@
 }
 
 .navbar {
-  background: #fff6fa;
+  background: #fcabce;
   height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,7 +23,7 @@
 }
 
 .navbar__logo {
-  color: #fcabce;
+  color: #fff6fa;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -52,7 +52,7 @@
 }
 
 .navbar__menu--links {
-  color: #fcabce;
+  color: #fff6fa;
   text-decoration: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -61,11 +61,12 @@
 }
 
 .navbar__menu--links:hover {
-  background-color: #fcabce;
-  color: #fff6fa;
+  background-color: #fff6fa;
+  color: #fcabce;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border-radius: 0.2rem;
+  opacity: 80%;
 }
 
 .slidershow {
