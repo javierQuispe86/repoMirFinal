@@ -1,0 +1,56 @@
+@import "colors";
+@import "media-queries";
+
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    background: $light;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem calc((100vw - 1200px) /2);
+    z-index: 10;
+    position: relative;
+
+    &__logo {
+        color: $dark;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2rem;
+        margin-left: 24px;
+        @extend %align-center;
+
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+
+    &__menu {
+        @extend %align-center;
+        list-style: none;
+        text-align: center;
+        margin-right: 24px;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        &--links {
+            color: $dark;
+            text-decoration: none;
+            @extend %align-center;
+            justify-content: center;
+            padding: 0.5rem;
+
+            &:hover {
+                background-color: $dark;
+                color: $light;
+                transition: all 0.3s ease;
+                border-radius: 0.2rem;
+            }
+        }
+    }
+}

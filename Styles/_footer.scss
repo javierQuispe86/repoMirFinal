@@ -1,0 +1,28 @@
+@import "colors";
+@import "media-queries";
+
+.footer {
+    margin-top: 2rem;
+
+    @include mobile {
+        margin-top: 5rem;
+    }
+
+    &__container {
+        background: $dark;
+        color: $light;
+        display: flex;
+        justify-content: space-around;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    &__menu {
+
+        &--links {
+            text-decoration: none;
+            color: $light;
+            flex-direction: column;
+        }
+    }
+
+}

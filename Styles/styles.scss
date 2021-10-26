@@ -1,0 +1,199 @@
+@import "navbar";
+@import "colors";
+@import "slides";
+@import "footer";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background: $light;
+}
+
+.main {
+    margin-top: 35rem;
+    background-color: $light;
+    color: $dark;
+
+    @include mobile {
+        margin-top: 10rem;
+    }
+}
+
+//** Main tratamientos/ nutrición/ contacto *//
+
+.mainSection {
+    margin-top: 8rem;
+    background-color: $light;
+    color: $dark;
+
+    @include mobile {
+        margin-top: 8rem;
+    }
+}
+
+.section {
+    display: flex;
+    justify-content: space-around;
+
+    .articleMain {
+        text-align: center;
+        width: 30%;
+    }
+
+    .imgMain {
+        border-radius: 10%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        width: 80%;
+    }
+
+    @include mobile {
+        font-size: 0.6rem;
+    }
+}
+
+//** Main Instalaciones/ nosotros *//
+
+.mainSectionBis {
+    margin-top: 8rem;
+    background-color: $light;
+    color: $dark;
+
+    @include mobile {
+        margin-top: 8rem;
+    }
+}
+
+.sectionBis {
+    display: flex;
+    justify-content: space-around;
+
+    .articleMainBis {
+        text-align: center;
+        width: 30%;
+    }
+
+    .imgMainBis {
+        border-radius: 10%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        width: 80%;
+        align-items: row;
+    }
+
+    @include mobile {
+        font-size: 0.8rem;
+    }
+}
+
+//* Contacto *//
+
+@mixin box() {
+    outline: none;
+    border: none;
+    background: $dark;
+    color: $light;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+#contact {
+    color: $dark;
+    height: auto;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+
+    h1 {
+        margin: 8rem 0;
+        font-size: 2.5rem;
+        text-align: center;
+
+        span {
+            color: $dark;
+            font-style: italic;
+        }
+    }
+
+    .contact-container {
+        width: 90vw;
+
+        form {
+            .column {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(25rem, 1fr));
+                grid-gap: 2rem;
+
+                .box {
+                    @include box();
+                    height: 4rem;
+                    padding: 0 2rem;
+
+                    &::placeholder {
+                        color: $light;
+                    }
+                }
+            }
+
+            .msg-box {
+                width: 100%;
+                resize: none;
+                height: 10rem;
+                padding: 1rem 2rem;
+                margin-top: 2rem;
+                @include box();
+
+                &::placeholder {
+                    color: $light;
+                }
+            }
+        }
+
+        input[type="submit"] {
+            background: $dark;
+            @include box();
+            padding: 1rem 2rem;
+            margin: 2rem 0;
+            cursor: pointer;
+
+            &:hover {
+                background: $light;
+                color: $dark;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    #contact {
+        .contact-container {
+            form {
+                .column {
+                    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+
+    #contact {
+        .contact-container {
+            form {
+                .column {
+                    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+                }
+            }
+        }
+    }
+}
