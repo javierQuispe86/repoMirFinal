@@ -231,6 +231,7 @@ body {
 .section .articleMain {
   text-align: center;
   width: 25rem;
+  margin-bottom: 2rem;
 }
 
 .section .imgMain {
@@ -279,6 +280,7 @@ body {
 .sectionBis .articleMainBis {
   text-align: center;
   width: 30%;
+  margin-bottom: 2rem;
 }
 
 .sectionBis .imgMainBis {
